@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: white;
+            
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(#232b43,#0e121a);
+        }
+        button{
+            padding: 7px 10px;
+            margin: 10px;
+
+        }
+
+        input{
+            padding: 7px 12px;
+
+        }
+        form{
+            color: white;
+            margin: 10px;
+        }
+
+        #greet{
+            height: 40vh;
+            width: 48%;
+            float: left;
+            border-right: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #symbol{
+            margin: 10px;
+        }
+
+        #add{
+            height: 40vh;
+            width: 49%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="/svc/greeting" method="get" id="greet">
+            <h1>GREETINGS</h1>
+            <input type="text" name="firstname" placeholder="Enter name">
+            <button type="submit">SUBMIT</button>
+        </form>
+    
+        <form action="/svc/add" method="post" id="add">
+            <h1>ADDITION</h1>
+            <input type="number" name="num1">
+            <span id="symbol">+</span>
+            <input type="number" name="num2">
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    
+</body>
+</html>
